@@ -1,0 +1,36 @@
+{
+  "name": "bootcamp-project-2025",
+  "version": "1.0.0",
+  "description": "This is how we will be tracking your milestones throughout bootcamp! By the end of bootcamp, you will have a fullstack personal portfolio website.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "build:watch": "tsc -w",
+    "format": "prettier --write \"**/*.{html,css,ts,js,json}\"",
+    "format:check": "prettier --check \"**/*.{html,css,ts,js,json}\"",
+    "lint": "eslint \"**/*.{ts,js,html}\"",
+    "lint:fix": "eslint \"**/*.{ts,js,html}\" --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/internetspending/bootcamp-project-2025.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/internetspending/bootcamp-project-2025/issues"
+  },
+  "homepage": "https://github.com/internetspending/bootcamp-project-2025#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^8.46.1",
+    "@typescript-eslint/parser": "^8.46.1",
+    "eslint": "^9.37.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-html": "^8.1.3",
+    "prettier": "^3.6.2",
+    "typescript": "^5.9.3"
+  }
+}
