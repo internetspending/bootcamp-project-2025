@@ -1,0 +1,17 @@
+# Dependencies
+/node_modules
+
+# System files
+.DS_Store
+
+# Editor directories
+.vscode/
+.idea/
+
+# Build outputs (we keep src/*.js for the bootcamp requirements)
+# If you want to ignore them later, uncomment:
+# src/*.js
+# src/*.d.ts
+# src/*.js.map
+# src/*.d.ts.map
+
