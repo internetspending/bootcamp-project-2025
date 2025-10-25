@@ -14,7 +14,7 @@ export default function ContactPage() {
           <div className="space-y-4">
             <div>
               <h3 className="font-medium text-gray-900">Email</h3>
-              <p className="text-gray-600">jeron.perey@calpoly.edu</p>
+              <p className="text-gray-600">jperey@calpoly.edu</p>
             </div>
             <div>
               <h3 className="font-medium text-gray-900">LinkedIn</h3>
@@ -22,7 +22,7 @@ export default function ContactPage() {
             </div>
             <div>
               <h3 className="font-medium text-gray-900">GitHub</h3>
-              <p className="text-gray-600">github.com/jeronperey</p>
+              <p className="text-gray-600">github.com/internetspending</p>
             </div>
             <div>
               <h3 className="font-medium text-gray-900">Location</h3>

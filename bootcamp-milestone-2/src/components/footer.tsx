@@ -27,13 +27,13 @@ export default function Footer() {
         <div className={style.footerSection}>
           <h4 className={style.footerSubtitle}>Connect</h4>
           <div className={style.socialLinks}>
-            <a href="mailto:jeron.perey@calpoly.edu" className={style.socialLink}>
+            <a href="mailto:jperey@calpoly.edu" className={style.socialLink}>
               Email
             </a>
             <a href="https://linkedin.com/in/jeronperey" className={style.socialLink} target="_blank" rel="noopener noreferrer">
               LinkedIn
             </a>
-            <a href="https://github.com/jeronperey" className={style.socialLink} target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/internetspending" className={style.socialLink} target="_blank" rel="noopener noreferrer">
               GitHub
             </a>
           </div>
