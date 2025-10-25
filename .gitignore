@@ -8,6 +8,9 @@
 .vscode/
 .idea/
 
+# Milestone work folders
+bootcamp-milestone-1/
+
 # Build outputs (we keep src/*.js for the bootcamp requirements)
 # If you want to ignore them later, uncomment:
 # src/*.js
