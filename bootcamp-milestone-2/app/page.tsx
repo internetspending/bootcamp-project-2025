@@ -5,13 +5,13 @@ import blogs from '../src/app/blogData';
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gray-50">
+    <main className="min-h-screen" style={{ backgroundColor: 'var(--sage-light)' }}>
       <section className="hero py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="hero-text">
-              <h1 className="text-5xl font-bold mb-6">
-                <span className="text-blue-600">Hi, I'm</span> Jeron Perey
+              <h1 className="text-5xl font-bold mb-6" style={{ color: 'var(--forest-dark)' }}>
+                <span style={{ color: 'var(--dusty-teal)' }}>Hi, I'm</span> Jeron Perey
               </h1>
               <p className="text-xl text-gray-600 mb-4">
                 Computer Science Student at Cal Poly SLO
