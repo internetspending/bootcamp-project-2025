@@ -1,5 +1,5 @@
-import BlogPreview from '../src/components/blogPreview';
-import blogs from '../src/app/blogData';
+import BlogPreview from '../../src/components/blogPreview';
+import blogs from '../../src/app/blogData';
 
 export default function BlogPage() {
   return (
