@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 import style from './projectCard.module.css';
 
 interface Project {
@@ -9,8 +8,6 @@ interface Project {
   image: string;
   imageAlt: string;
   technologies: string[];
-  githubUrl?: string;
-  liveUrl?: string;
 }
 
 export default function ProjectCard({ 
@@ -18,9 +15,7 @@ export default function ProjectCard({
   description, 
   image, 
   imageAlt, 
-  technologies, 
-  githubUrl, 
-  liveUrl 
+  technologies
 }: Project) {
   return (
     <div className={style.projectCard}>
@@ -40,18 +35,6 @@ export default function ProjectCard({
           {technologies.map((tech, index) => (
             <span key={index} className={style.techTag}>{tech}</span>
           ))}
-        </div>
-        <div className={style.projectLinks}>
-          {githubUrl && (
-            <Link href={githubUrl} className={style.link} target="_blank" rel="noopener noreferrer">
-              GitHub
-            </Link>
-          )}
-          {liveUrl && (
-            <Link href={liveUrl} className={style.link} target="_blank" rel="noopener noreferrer">
-              Live Demo
-            </Link>
-          )}
         </div>
       </div>
     </div>

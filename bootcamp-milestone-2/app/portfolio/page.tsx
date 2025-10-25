@@ -4,28 +4,23 @@ const projects = [
   {
     title: "Personal Portfolio Website",
     description: "A modern, responsive portfolio website built with Next.js, TypeScript, and Tailwind CSS. Features dynamic blog system, responsive design, and optimized performance.",
-    image: "/images/portfolio-preview.jpg",
-    imageAlt: "Portfolio website screenshot",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "React"],
-    githubUrl: "https://github.com/jeronperey/portfolio",
-    liveUrl: "https://jeronperey.dev"
+    image: "/images/portfolio.svg",
+    imageAlt: "Portfolio website emoji",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "React"]
   },
   {
     title: "Amazon FBA Analytics Dashboard",
     description: "Custom analytics system for tracking Amazon FBA performance, ROI analysis, and inventory management. Built with Excel/Google Sheets with advanced formulas and data visualization.",
-    image: "/images/amazon-analytics.jpg",
-    imageAlt: "Analytics dashboard screenshot",
-    technologies: ["Excel", "Google Sheets", "Data Analysis", "ROI Optimization"],
-    githubUrl: "https://github.com/jeronperey/amazon-analytics"
+    image: "/images/analytics.svg",
+    imageAlt: "Analytics dashboard emoji",
+    technologies: ["Excel", "Google Sheets", "Data Analysis", "ROI Optimization"]
   },
   {
     title: "Binary Search Learning Tool",
     description: "Interactive visualization tool for understanding binary search algorithms. Helps students and developers grasp the concept through step-by-step visual demonstrations.",
-    image: "/images/binary-search-tool.jpg",
-    imageAlt: "Binary search visualization tool",
-    technologies: ["JavaScript", "HTML5 Canvas", "Algorithms", "Education"],
-    githubUrl: "https://github.com/jeronperey/binary-search-tool",
-    liveUrl: "https://binary-search-demo.vercel.app"
+    image: "/images/binary-search.svg",
+    imageAlt: "Binary search visualization emoji",
+    technologies: ["JavaScript", "HTML5 Canvas", "Algorithms", "Education"]
   }
 ];
 
