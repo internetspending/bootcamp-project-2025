@@ -1,0 +1,83 @@
+.footer {
+  background: #1f2937;
+  color: white;
+  padding: 3rem 0 1rem;
+  margin-top: auto;
+}
+
+.footerContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.footerSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.footerTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #3b82f6;
+}
+
+.footerSubtitle {
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: #e5e7eb;
+}
+
+.footerDescription {
+  color: #9ca3af;
+  line-height: 1.6;
+}
+
+.footerNav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footerLink {
+  color: #d1d5db;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.footerLink:hover {
+  color: #3b82f6;
+}
+
+.socialLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.socialLink {
+  color: #d1d5db;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.socialLink:hover {
+  color: #3b82f6;
+}
+
+.footerBottom {
+  border-top: 1px solid #374151;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  text-align: center;
+}
+
+.copyright {
+  color: #9ca3af;
+  font-size: 0.875rem;
+}

@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+:root {
+  /* Earthy Harmony color palette */
+  --sage-light: #cbded3;
+  --dusty-teal: #8ba49a;
+  --warm-beige: #d2c49e;
+  --forest-dark: #3b6255;
+  --cream-white: #e2dfda;
+  
+  --background: var(--sage-light);
+  --foreground: var(--forest-dark);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  background-color: var(--sage-light);
+  position: relative;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-inter), sans-serif;
+  line-height: 1.6;
+  color: var(--forest-dark);
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
