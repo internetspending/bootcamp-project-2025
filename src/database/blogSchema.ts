@@ -1,11 +1,18 @@
 // src/database/blogSchema.ts
 import mongoose, { Schema, InferSchemaType, models } from "mongoose";
 
-const commentSchema = new Schema(
+// TypeScript type for comment
+export type IComment = {
+  user: string;
+  comment: string;
+  time: Date;
+};
+
+const CommentSchema = new Schema(
   {
-    author: { type: String, required: false },
-    message: { type: String, required: true },
-    createdAt: { type: Date, default: Date.now },
+    user: { type: String, required: true },
+    comment: { type: String, required: true },
+    time: { type: Date, required: true, default: Date.now },
   },
   { _id: false }
 );
@@ -19,7 +26,7 @@ const blogSchema = new Schema(
     image:      { type: String, required: true },
     image_alt:  { type: String, required: true },
     content:    { type: String, required: true },
-    comments:   { type: [commentSchema], default: [] },
+    comments:   { type: [CommentSchema], default: [] },
   },
   { collection: "blogs", timestamps: false }
 );
