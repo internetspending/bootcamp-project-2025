@@ -1,9 +1,10 @@
-// src/app/blog/[slug]/page.tsx
-import connectDB from "@/database/db";
-import Blog, { BlogDoc } from "@/database/blogSchema";
+// app/blog/[slug]/page.tsx
+import Comment from "@/components/Comment";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
+import connectDB from "@/database/db";
+import Blog, { BlogDoc } from "@/database/blogSchema";
 
 export const dynamic = 'force-dynamic';
 
@@ -51,6 +52,21 @@ export default async function BlogDetail({ params }: Props) {
             {blog.content}
           </div>
         </article>
+
+        <section className="mt-8">
+          <h2 className="text-xl font-semibold mb-3">
+            Comments ({blog.comments?.length ?? 0})
+          </h2>
+          {blog.comments && blog.comments.length > 0 ? (
+            blog.comments.map((comment: any, index: number) => (
+              <Comment key={index} comment={comment} />
+            ))
+          ) : (
+            <p className="text-gray-500 text-sm">
+              No comments yet. Be the first to comment!
+            </p>
+          )}
+        </section>
       </article>
     </main>
   );
