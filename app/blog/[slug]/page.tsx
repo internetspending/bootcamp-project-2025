@@ -1,5 +1,6 @@
 // app/blog/[slug]/page.tsx
 import Comment from "@/components/Comment";
+import CommentForm from "@/components/CommentForm";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
@@ -66,6 +67,8 @@ export default async function BlogDetail({ params }: Props) {
               No comments yet. Be the first to comment!
             </p>
           )}
+          
+          <CommentForm slug={slug} />
         </section>
       </article>
     </main>
