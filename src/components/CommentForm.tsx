@@ -1,22 +1,28 @@
 "use client";
 
 import { useState, FormEvent } from "react";
-import { useRouter } from "next/navigation";
 
 type CommentFormProps = {
   slug: string;
 };
 
 export default function CommentForm({ slug }: CommentFormProps) {
-  const router = useRouter();
   const [user, setUser] = useState("");
   const [comment, setComment] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState("");
+  const [success, setSuccess] = useState(false);
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setError("");
+    setSuccess(false);
+
+    if (!user.trim() || !comment.trim()) {
+      setError("Please fill in all fields");
+      return;
+    }
+
     setIsSubmitting(true);
 
     try {
@@ -30,15 +36,20 @@ export default function CommentForm({ slug }: CommentFormProps) {
 
       if (!response.ok) {
         const data = await response.json();
-        throw new Error(data.message || "Failed to add comment");
+        throw new Error(data.error || "Failed to add comment");
       }
 
-      // Reset form and refresh the page to show new comment
+      // Reset form and show success
       setUser("");
       setComment("");
-      router.refresh();
+      setSuccess(true);
+
+      // Refresh the page to show new comment
+      setTimeout(() => {
+        window.location.reload();
+      }, 1000);
     } catch (err) {
-      setError(err instanceof Error ? err.message : "An error occurred");
+      setError(err instanceof Error ? err.message : "Failed to add comment. Please try again.");
     } finally {
       setIsSubmitting(false);
     }
@@ -51,6 +62,12 @@ export default function CommentForm({ slug }: CommentFormProps) {
       {error && (
         <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded">
           {error}
+        </div>
+      )}
+
+      {success && (
+        <div className="bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded">
+          Comment added!
         </div>
       )}
 
